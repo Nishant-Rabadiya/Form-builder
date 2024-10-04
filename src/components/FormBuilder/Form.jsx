@@ -31,21 +31,20 @@ const Form = () => {
     const contextValue = useContext(UserContext);
     const moveElement = (dragIndex, hoverIndex) => {
         const updatedElements = [...contextValue?.formElements];
-        const [draggedElement] = updatedElements?.splice(dragIndex, 1); 
-        const { index, ...elementWithoutIndex } = draggedElement; 
+        const [draggedElement] = updatedElements?.splice(dragIndex, 1);
+        const { index, ...elementWithoutIndex } = draggedElement;
 
-        updatedElements?.splice(hoverIndex, 0, elementWithoutIndex); 
-        contextValue?.setFormElements(updatedElements); 
+        updatedElements?.splice(hoverIndex, 0, elementWithoutIndex);
+        contextValue?.setFormElements(updatedElements);
     };
 
     const [{ isOver }, drop] = useDrop(() => ({
         accept: formElement?.type,
         drop: (item) => {
             if (item) {
-                delete item?.index;
                 const newItem = {
                     ...item,
-                    id: Date.now(), 
+                    id: Date.now(),
                     title: item?.name,
                     style: {
                         color: '#000000',
@@ -54,7 +53,7 @@ const Form = () => {
                     },
                     type: item?.name === 'Header' ? 'header' : item?.name === 'Submit' ? 'button' : 'input',
                 };
-                contextValue?.setFormElements((prev) => [...prev, newItem]); 
+                contextValue?.setFormElements((prev) => [...prev, newItem]);
             }
         },
         collect: (monitor) => ({
@@ -63,7 +62,7 @@ const Form = () => {
     }));
 
     const handleElementClick = (index, element) => {
-        contextValue?.setSelectedIndex(index); 
+        contextValue?.setSelectedIndex(index);
         contextValue?.setSelectedValue(element);
     };
 
@@ -102,28 +101,6 @@ const Form = () => {
 
 export default Form;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // import React, { useContext } from 'react';
 // import { useDrop } from 'react-dnd';
 
@@ -160,9 +137,9 @@ export default Form;
 
 //     const moveElement = (dragIndex, hoverIndex) => {
 //         const updatedElements = [...contextValue?.formElements];
-//         const [draggedElement] = updatedElements?.splice(dragIndex, 1); 
+//         const [draggedElement] = updatedElements?.splice(dragIndex, 1);
 //         updatedElements.splice(hoverIndex, 0, draggedElement);
-//         contextValue.setFormElements(updatedElements); 
+//         contextValue.setFormElements(updatedElements);
 //     };
 
 //     const [{ isOver }, drop] = useDrop(() => ({
@@ -171,7 +148,7 @@ export default Form;
 //             if (item && item?.index === undefined) {
 //                 const newItem = {
 //                     ...item,
-//                     id: Date.now(), 
+//                     id: Date.now(),
 //                     title: item?.name,
 //                     style: {
 //                         color: '#000000',
@@ -180,7 +157,7 @@ export default Form;
 //                     },
 //                     type: item?.name === 'Header' ? 'header' : item?.name === 'Submit' ? 'button' : 'input',
 //                 };
-//                 contextValue?.setFormElements((prev) => [...prev, newItem]); 
+//                 contextValue?.setFormElements((prev) => [...prev, newItem]);
 //             }
 //         },
 //         collect: (monitor) => ({
@@ -189,7 +166,7 @@ export default Form;
 //     }));
 
 //     const handleElementClick = (index, element) => {
-//         contextValue?.setSelectedIndex(index); 
+//         contextValue?.setSelectedIndex(index);
 //         contextValue?.setSelectedValue(element);
 //     };
 
@@ -287,9 +264,9 @@ export default Form;
 
 //     const moveElement = (dragIndex, hoverIndex) => {
 //         const updatedElements = [...contextValue?.formElements];
-//         const [draggedElement] = updatedElements?.splice(dragIndex, 1); 
+//         const [draggedElement] = updatedElements?.splice(dragIndex, 1);
 //         updatedElements.splice(hoverIndex, 0, draggedElement);
-//         contextValue.setFormElements(updatedElements); 
+//         contextValue.setFormElements(updatedElements);
 //     };
 
 //     const [{ isOver }, drop] = useDrop(() => ({
@@ -298,7 +275,7 @@ export default Form;
 //             if (item && item?.index === undefined) {
 //                 const newItem = {
 //                     ...item,
-//                     id: Date.now(), 
+//                     id: Date.now(),
 //                     title: item?.name,
 //                     style: {
 //                         color: '#000000',
@@ -307,7 +284,7 @@ export default Form;
 //                     },
 //                     type: item?.name === 'Header' ? 'header' : item?.name === 'Submit' ? 'button' : 'input',
 //                 };
-//                 contextValue?.setFormElements((prev) => [...prev, newItem]); 
+//                 contextValue?.setFormElements((prev) => [...prev, newItem]);
 //             }
 //         },
 //         collect: (monitor) => ({
@@ -316,7 +293,7 @@ export default Form;
 //     }));
 
 //     const handleElementClick = (index, element) => {
-//         contextValue?.setSelectedIndex(index); 
+//         contextValue?.setSelectedIndex(index);
 //         contextValue?.setSelectedValue(element);
 //     };
 
@@ -479,9 +456,9 @@ export default Form;
 
 //     const moveElement = (dragIndex, hoverIndex) => {
 //         const updatedElements = [...contextValue.formElements];
-//         const [draggedElement] = updatedElements.splice(dragIndex, 1); 
-//         updatedElements.splice(hoverIndex, 0, draggedElement); 
-//         contextValue.setFormElements(updatedElements); 
+//         const [draggedElement] = updatedElements.splice(dragIndex, 1);
+//         updatedElements.splice(hoverIndex, 0, draggedElement);
+//         contextValue.setFormElements(updatedElements);
 //     };
 
 //     const [{ isOver }, drop] = useDrop(() => ({
@@ -490,7 +467,7 @@ export default Form;
 //             if (item && item.index === undefined) {
 //                 const newItem = {
 //                     ...item,
-//                     id: Date.now(), 
+//                     id: Date.now(),
 //                     title: item.name,
 //                     style: {
 //                         color: '#000000',
@@ -499,7 +476,7 @@ export default Form;
 //                     },
 //                     type: item.name === 'Header' ? 'header' : item.name === 'Submit' ? 'button' : 'input',
 //                 };
-//                 contextValue.setFormElements((prev) => [...prev, newItem]); 
+//                 contextValue.setFormElements((prev) => [...prev, newItem]);
 //             }
 //         },
 //         collect: (monitor) => ({
@@ -508,7 +485,7 @@ export default Form;
 //     }));
 
 //     const handleElementClick = (index, element) => {
-//         contextValue?.setSelectedIndex(index); 
+//         contextValue?.setSelectedIndex(index);
 //         contextValue?.setSelectedValue(element);
 //     };
 
@@ -556,11 +533,11 @@ export default Form;
 //                 return;
 //             }
 
-//             const dragIndex = item.index; 
+//             const dragIndex = item.index;
 //             const hoverIndex = index;
 
 //             if (dragIndex === hoverIndex) {
-//                 return; 
+//                 return;
 //             }
 
 //             const hoverBoundingRect = ref.current.getBoundingClientRect();
@@ -584,16 +561,16 @@ export default Form;
 //         type: 'FORM_ELEMENT',
 //         item: { index },
 //         collect: (monitor) => ({
-//             isDragging: monitor.isDragging(), 
+//             isDragging: monitor.isDragging(),
 //         }),
 //     });
 
-//     drag(drop(ref)); 
+//     drag(drop(ref));
 
 //     return (
 //         <div
 //             ref={ref}
-//             className={`mb-3 ${isDragging ? 'opacity-50' : ''}`} 
+//             className={`mb-3 ${isDragging ? 'opacity-50' : ''}`}
 //             onClick={onClick}
 //         >
 //             {isSelected && !preview ? (

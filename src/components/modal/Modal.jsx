@@ -1,18 +1,18 @@
 import React, { useContext } from 'react';
+import { useNavigate, useSearchParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import { toast } from 'react-toastify';
-import { useNavigate, useSearchParams } from 'react-router-dom';
 
 import { UserContext } from '../../pages/formBuilder';
-import { sendFormBuilderData, updateForm } from '../../api/api';
 import { formMutation } from '../commonFunction';
+import { sendFormBuilderData, updateForm } from '../../api/api';
 
 function ConfirmModal() {
-  const contextValue = useContext(UserContext);
   const navigate = useNavigate();
+  const contextValue = useContext(UserContext);
   const [searchParams] = useSearchParams();
-  const paramValue = searchParams.get('id');
+  const paramValue = searchParams?.get('id');
 
   const mutation = formMutation('formBuilder', paramValue ? updateForm : sendFormBuilderData);
 

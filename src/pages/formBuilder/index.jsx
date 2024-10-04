@@ -13,57 +13,55 @@ import { getFormData } from '../../components/commonFunction';
 
 export const UserContext = createContext();
 
-const FormBuilder = () => {  
-  const [searchParams] = useSearchParams();
-  const paramValue = searchParams.get('id');
-
-  const formData = getFormData('formBuilder', getFormBuilderData);
-
+const FormBuilder = () => {
   const [formElements, setFormElements] = useState([]);
   const [selectedIndex, setSelectedIndex] = useState(null);
   const [selectedValue, setSelectedValue] = useState();
   const [preview, setPreview] = useState(false);
-  const [showModal, setShowModal] = useState(false); 
+  const [showModal, setShowModal] = useState(false);
+
+  const [searchParams] = useSearchParams();
+  const paramValue = searchParams?.get('id');
+
+  const formData = getFormData('formBuilder', getFormBuilderData);
+
   useEffect(() => {
     if (paramValue) {
       const currentForm = formData?.find(form => form?.id === paramValue);
       if (currentForm) {
-        const { elements } = currentForm; 
-        setFormElements(elements || []); 
+        const { elements } = currentForm;
+        setFormElements(elements || []);
       }
     }
   }, [paramValue, formData]);
-  
+
   const contextValue = {
-      formElements,
-      setFormElements,
-      selectedIndex,
-      setSelectedIndex,
-      selectedValue,
-      setSelectedValue,
-      preview,
-      setPreview,
-      showModal, 
-      setShowModal
+    formElements,
+    setFormElements,
+    selectedIndex,
+    setSelectedIndex,
+    selectedValue,
+    setSelectedValue,
+    preview,
+    setPreview,
+    showModal,
+    setShowModal
   };
 
   return (
-
-    <>
       <UserContext.Provider value={contextValue}>
-          <DndProvider backend={HTML5Backend}>
-            <div className='main-section'>
-                <Navbar />
-                <div className='row form-builder-container'>
-                  <LeftSidebar preview={preview}/>
-                  <Form />
-                  <RightSidebar preview={preview}/>
-                </div>
+        <DndProvider backend={HTML5Backend}>
+          <div className='main-section'>
+            <Navbar />
+            <div className='row form-builder-container'>
+              <LeftSidebar preview={preview} />
+              <Form />
+              <RightSidebar preview={preview} />
             </div>
-          </DndProvider>
-        <ConfirmModal/>
+          </div>
+        </DndProvider>
+        <ConfirmModal />
       </UserContext.Provider>
-    </>
   );
 };
 

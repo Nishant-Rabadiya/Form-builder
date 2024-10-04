@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useRef} from 'react';
+import React, { useContext, useEffect, useRef } from 'react';
 import { useDrag, useDrop } from 'react-dnd';
 import { component } from './Form';
 import ElementLayout from './ElementLayout';
@@ -13,11 +13,11 @@ const DraggableElement = ({ index, element, moveElement, onClick, onDelete, isSe
         accept: formElement?.type,
         hover(item) {
             if (!ref.current || item?.index === index) {
-                return; 
+                return;
             }
 
-            moveElement(item.index, index); 
-            item.index = index; 
+            moveElement(item?.index, index);
+            item.index = index;
         },
     });
 
@@ -30,7 +30,7 @@ const DraggableElement = ({ index, element, moveElement, onClick, onDelete, isSe
     });
 
     useEffect(() => {
-        const upadatedFormElements = contextValue?.formElements?.filter((element)=> element?.title !== undefined);
+        const upadatedFormElements = contextValue?.formElements?.filter((element) => element?.title !== undefined);
         contextValue?.setFormElements(upadatedFormElements)
     }, []);
 
@@ -52,5 +52,3 @@ const DraggableElement = ({ index, element, moveElement, onClick, onDelete, isSe
 };
 
 export default DraggableElement;
-
-

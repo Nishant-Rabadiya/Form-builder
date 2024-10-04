@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Dashboard from './pages/dashboard';
 import FormBuilder from './pages/formBuilder';
 
-import './App.css';
 import './styles/dashboard/dashboard.css'
 import './styles/formBuilder/formBuilder.css'
 

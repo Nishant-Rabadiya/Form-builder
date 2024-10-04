@@ -22,8 +22,8 @@ const Navbar = () => {
 
             <div className='d-flex align-items-center gap-1'>
                 <button
-                    className='btn btn-success' 
-                    data-bs-toggle='modal' data-bs-target='#staticBackdrop' 
+                    className='btn btn-success'
+                    data-bs-toggle='modal' data-bs-target='#staticBackdrop'
                     type='button'
                     disabled={(!contextValue?.formElements.length || contextValue?.preview) ?? true}
                     onClick={() => contextValue?.setShowModal(true)}>
@@ -42,7 +42,7 @@ const Navbar = () => {
                     className='btn btn-secondary'
                     disabled={(!contextValue?.formElements?.length) ?? true}
                     onClick={handlePreviewButton}>
-                    {contextValue?.preview ? 'Back' :  'Preview' }
+                    {contextValue?.preview ? 'Back' : 'Preview'}
                 </button>
             </div>
         </div>

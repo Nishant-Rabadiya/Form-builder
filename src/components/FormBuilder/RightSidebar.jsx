@@ -1,7 +1,8 @@
 import React, { useContext, useEffect } from 'react';
+
 import { UserContext } from '../../pages/formBuilder';
-import ElementConfiguration from '../formConfiguration/ElementConfiguration';
 import { positionButton } from '../../@core/constants';
+import ElementConfiguration from '../formConfiguration/ElementConfiguration';
 
 const RightSidebar = ({ preview }) => {
     const contextValue = useContext(UserContext);
@@ -35,7 +36,7 @@ const RightSidebar = ({ preview }) => {
     };
 
     useEffect(() => {
-        const findIndex = contextValue?.formElements?.findIndex((element) => element.id === contextValue?.selectedValue?.id);
+        const findIndex = contextValue?.formElements?.findIndex((element) => element?.id === contextValue?.selectedValue?.id);
         if (findIndex !== -1) {
             const updatedFormElements = [...contextValue?.formElements];
             updatedFormElements[findIndex] = contextValue?.selectedValue;
@@ -106,7 +107,7 @@ const RightSidebar = ({ preview }) => {
                         </div>
                     </>
                 ) : (
-                    ''
+                    'No element is selected yet.'
                 )}
             </div>
         </div>
