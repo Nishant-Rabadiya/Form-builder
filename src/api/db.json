@@ -1,0 +1,102 @@
+{
+  "formBuilder": [
+    {
+      "id": "3dc1",
+      "elements": [
+        {
+          "name": "Header",
+          "id": 1728030631080,
+          "title": "Registration",
+          "style": {
+            "color": "#9877ca",
+            "fontSize": "31",
+            "position": "center"
+          },
+          "type": "header"
+        },
+        {
+          "name": "Name",
+          "id": 1728030631837,
+          "title": "First name",
+          "style": {
+            "color": "#ec3c3c",
+            "fontSize": "14",
+            "position": "left"
+          },
+          "type": "input"
+        },
+        {
+          "name": "Name",
+          "id": 1728030691137,
+          "title": "Last name",
+          "style": {
+            "color": "#fb2323",
+            "fontSize": "14",
+            "position": "left"
+          },
+          "type": "input"
+        },
+        {
+          "name": "Email",
+          "id": 1728030710665,
+          "title": "Email",
+          "style": {
+            "color": "#ff9999",
+            "fontSize": "14",
+            "position": "left"
+          },
+          "type": "input"
+        },
+        {
+          "name": "Phone",
+          "id": 1728030717562,
+          "title": "Phone",
+          "style": {
+            "color": "#f58484",
+            "fontSize": "14",
+            "position": "left"
+          },
+          "type": "input"
+        },
+        {
+          "name": "Address",
+          "id": 1728030724931,
+          "title": "Address",
+          "style": {
+            "color": "#ee9b9b",
+            "fontSize": "14",
+            "position": "left"
+          },
+          "type": "input"
+        },
+        {
+          "name": "Submit",
+          "id": 1728030733329,
+          "title": "Register",
+          "style": {
+            "color": "#17d98f",
+            "fontSize": "16",
+            "position": "center"
+          },
+          "type": "button"
+        }
+      ]
+    },
+    {
+      "id": "7f8b",
+      "elements": [
+        {
+          "name": "Header",
+          "id": 1728035476800,
+          "title": "Header",
+          "style": {
+            "color": "#ac2f2f",
+            "fontSize": "23",
+            "position": "center"
+          },
+          "type": "header"
+        }
+      ]
+    }
+  ]
+}

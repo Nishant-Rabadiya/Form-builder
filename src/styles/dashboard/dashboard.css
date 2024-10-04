@@ -1,0 +1,64 @@
+.navbar {
+    background-color: #eeeeee;
+}
+
+.navbar-create-button {
+    border: none;
+    border-radius: 5px;
+    background-color: #00e100;
+    color: white;
+    padding: 2px 10px;
+}
+
+.navbar-create-button:hover {
+    background-color: #36c801;
+}
+
+.form-list-section {
+    height: 91vh;
+}
+
+.form-list {
+    height: 82vh;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+}
+
+.list {
+    border-radius: 5px;
+    width: 85%;
+    padding: 5px 10px;
+    background-color: #cfe9ff8f;
+}
+
+.list-icon {
+    padding: 3px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: white;
+}
+
+.list-title {
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 15px;
+}
+
+.edit-button {
+    border: none;
+    border-radius: 5px;
+    padding: 5px 15px;
+    background-color: #00d900eb;
+    margin-right: 10px;
+    color: white;
+}
+
+.delete-button {
+    border: none;
+    border-radius: 5px;
+    padding: 5px 15px;
+    background-color: #d90000d9;
+    color: white;
+}

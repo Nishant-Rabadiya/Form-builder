@@ -1,0 +1,68 @@
+.main-section {
+    background-color: rgb(236 236 236);
+    height: 100vh;
+}
+
+.navbar-section {
+    height: 7vh;
+}
+
+.row {
+    --bs-gutter-x: 0;
+    height: 93vh;
+}
+
+.element-header {
+    font-size: 13px;
+    font-weight: 500;
+    color: gray;
+}
+
+.element-title {
+    font-size: 13px !important;
+    font-weight: 500;
+}
+
+.element-configuration-header {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.delete-icon {
+    font-size: 13px;
+    color: red;
+}
+
+.form-body {
+    height: 630px !important;
+    overflow: auto;
+}
+
+.form-builder-container {
+    height: 93vh;
+}
+
+.form-body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.3);
+    background-color: #F5F5F5;
+}
+
+.form-body::-webkit-scrollbar {
+    width: 0px;
+    background-color: #F5F5F5;
+}
+
+.form-body::-webkit-scrollbar-thumb {
+    background-color: #000000;
+    border: 1px solid #555555;
+}
+
+
+.empty-element {
+    border: 3px dashed #c6c6c6;
+    background-color: #efefef;
+}
+
+.active-section {
+    border: 2px solid rgb(0, 219, 0);
+}
