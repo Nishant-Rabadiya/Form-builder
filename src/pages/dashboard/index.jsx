@@ -17,14 +17,13 @@ const Dashboard = () => {
     };
 
     const handleEditFormButton = (id) => {
-        const editForm = formData?.find(form => form?.id === id);
-        navigate(`/formbuilder?id=${editForm?.id}`);
+        navigate(`/formbuilder?id=${id}`);
     }
 
     return (
         <div>
             <div className='navbar d-flex justify-content-end p-3'>
-                <button className='navbar-create-button' onClick={() => navigate('/formbuilder')}>Create</button>
+                <button type='button' className='btn btn-success' onClick={() => navigate('/formbuilder')}>Create</button>
             </div>
 
             <div className='form-list-section px-3'>
@@ -39,9 +38,9 @@ const Dashboard = () => {
                                     </p>
                                     <p className='list-title m-0 '>Form <span className='text-secondary fs-6'>{form?.id}</span></p>
                                 </div>
-                                <div className='d-flex align-items-center'>
-                                    <button className='edit-button' onClick={() => handleEditFormButton(form?.id)}>Edit</button>
-                                    <button className='delete-button' onClick={() => handleDeleteFormButton(form?.id)}>Delete</button>
+                                <div className='d-flex align-items-center gap-2'>
+                                    <button type='button' className='btn btn-success ' onClick={() => handleEditFormButton(form?.id)}>Edit</button>
+                                    <button type='button' className='btn btn-danger' onClick={() => handleDeleteFormButton(form?.id)}>Delete</button>
                                 </div>
                             </div>
                         ))

@@ -20,3 +20,4 @@ const InputElements = ({ data, preview }) => {
 }
 
 export default InputElements;
+

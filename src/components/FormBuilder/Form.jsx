@@ -42,7 +42,7 @@ const Form = () => {
         accept: formElement?.type,
         drop: (item) => {
             if (item) {
-                const newItem = {
+                const newElement = {
                     ...item,
                     id: Date.now(),
                     title: item?.name,
@@ -53,7 +53,7 @@ const Form = () => {
                     },
                     type: item?.name === 'Header' ? 'header' : item?.name === 'Submit' ? 'button' : 'input',
                 };
-                contextValue?.setFormElements((prev) => [...prev, newItem]);
+                contextValue?.setFormElements((prev) => [...prev, newElement]);
             }
         },
         collect: (monitor) => ({
@@ -100,6 +100,33 @@ const Form = () => {
 };
 
 export default Form;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

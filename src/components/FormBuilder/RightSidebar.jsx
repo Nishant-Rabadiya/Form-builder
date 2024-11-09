@@ -96,8 +96,8 @@ const RightSidebar = ({ preview }) => {
                                 {positionButton.map((position, index) => (
                                     <button
                                         key={index}
-                                        onClick={() => handlePosition(position.toLowerCase())}
-                                        className={`py-1 border border-secondary ${index === 0 ? 'rounded-start' : index === positionButton.length - 1 ? 'rounded-end' : ''} ${contextValue?.selectedValue?.style?.position === position.toLowerCase() ? 'bg-success text-light' : ''}`}
+                                        onClick={() => handlePosition(position?.toLowerCase())}
+                                        className={`py-1 border border-secondary ${index === 0 ? 'rounded-start' : index === positionButton.length - 1 ? 'rounded-end' : ''} ${contextValue?.selectedValue?.style?.position === position?.toLowerCase() ? 'bg-success text-light' : ''}`}
                                     >
                                         {position}
                                     </button>
@@ -107,7 +107,7 @@ const RightSidebar = ({ preview }) => {
                         </div>
                     </>
                 ) : (
-                    'No element is selected yet.'
+                    ''
                 )}
             </div>
         </div>

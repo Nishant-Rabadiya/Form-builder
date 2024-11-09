@@ -52,3 +52,5 @@ const DraggableElement = ({ index, element, moveElement, onClick, onDelete, isSe
 };
 
 export default DraggableElement;
+
+

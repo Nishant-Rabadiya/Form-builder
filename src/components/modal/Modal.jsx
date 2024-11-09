@@ -36,9 +36,8 @@ function ConfirmModal() {
   };
 
   return (
-    <>
       <Modal
-        show={contextValue.showModal}
+        show={contextValue?.showModal}
         onHide={handleClose}
         backdrop="static"
         keyboard={false}
@@ -59,9 +58,9 @@ function ConfirmModal() {
           </Button>
         </Modal.Footer>
       </Modal>
-    </>
   );
 }
 
 export default ConfirmModal;
+
 
